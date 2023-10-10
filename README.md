@@ -10,7 +10,6 @@ Welcome to the AirBnB Clone Console! This is the first step towards building the
 * [4 Testing](#4-Testing)
 * [5 Usage](#5-Usage)
 * [6 Authors](#6-Authors)
-* [7 License](#7-license)
 
 # ``1-Introduction``
 Team project to build a clone of [AirBnB](https://www.airbnb.com/).
@@ -39,7 +38,7 @@ The console will perform the following tasks:
 ## ``3-Installation``
 1.  Clone this GitHub repository to your local machine.
 
-`git clone https://github.com/nuuxcode/AirBnB-Clone.git`
+`git clone https://github.com/MouadAbouOthmane/AirBnB_clone.git`
 
 2.  Navigate to the project directory.
 
@@ -205,9 +204,5 @@ python3 -m unittest discover tests
 
 ## ``6-Authors``
 
--   [Soumia Ouzat](https://github.com/SouaOui)
--   [Mounssif Bouhlaoui](https://github.com/nuuxcode)
-
-## ``7- License``
-
-This project is licensed under the MIT License - see the [LICENSE](https://chat.openai.com/LICENSE) file for details.
+-   [SIMOHAMMED22](https://github.com/SIMOHAMMED22)
+-   [Mouad Abou Othmane](https://github.com/MouadAbouOthmane)
