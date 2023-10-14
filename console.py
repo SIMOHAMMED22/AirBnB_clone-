@@ -108,6 +108,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
+        """just a new line"""
         pass
 
 
