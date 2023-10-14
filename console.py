@@ -20,7 +20,7 @@ class HBNBCommand(cmd.Cmd):
            "Amenity": Amenity, "City": City,
            "Review": Review, "State": State}
 
-    @staticmethod
+
     def do_create(self, line):
         """Creates a new instance of BaseModel"""
         if len(line) == 0:
