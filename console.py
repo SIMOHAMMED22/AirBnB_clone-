@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Program contains the entry point of the command interpreter"""
+
 import cmd
 from models.base_model import BaseModel
 from models.user import User
