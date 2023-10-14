@@ -12,6 +12,7 @@ from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
+    """HBNB Command class"""
 
     prompt = '(hbnb) '
 
