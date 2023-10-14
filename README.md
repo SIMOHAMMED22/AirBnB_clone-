@@ -122,7 +122,7 @@ $
 
 ```bash
 (hbnb) create BaseModel
-57262839-51d7-4a9a-93e2-35ed8e91d823
+e8bdc20f-0680-4f46-87bc-035ee56f47c0
 $
 ```
 
@@ -132,8 +132,8 @@ $
 > *Update the file.json*
 
 ```bash
-(hbnb) show BaseModel 57262839-51d7-4a9a-93e2-35ed8e91d823
-[BaseModel] (57262839-51d7-4a9a-93e2-35ed8e91d823) {'id': '57262839-51d7-4a9a-93e2-35ed8e91d823', 'created_at': datetime.datetime(2023, 8, 13, 14, 19, 19, 412265), 'updated_at': datetime.datetime(2023, 8, 13, 14, 19, 19, 412357)}
+(hbnb) show BaseModel e8bdc20f-0680-4f46-87bc-035ee56f47c0
+[BaseModel] (e8bdc20f-0680-4f46-87bc-035ee56f47c0) {'id': 'e8bdc20f-0680-4f46-87bc-035ee56f47c0', 'created_at': datetime.datetime(2023, 10, 14, 11, 29, 1, 974822), 'updated_at': datetime.datetime(2023, 10, 14, 11, 29, 1, 974839)}
 (hbnb)
 (hbhb)
 ```
@@ -159,7 +159,7 @@ $
 ** class name missing **
 (hbnb) destroy BaseModel
 ** instance id missing **
-(hbnb) destroy BaseModel 57262839-51d7-4a9a-93e2-35ed8e91d823
+(hbnb) destroy BaseModel e8bdc20f-0680-4f46-87bc-035ee56f47c0
 (hbnb) all
 []
 ```
