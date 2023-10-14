@@ -99,7 +99,7 @@ class HBNBCommand(cmd.Cmd):
                 print(arr)
 
     def do_EOF(self, line):
-        """Quit command ss to exit the program"""
+        """Quit command to exit the program"""
         print()
         return True
 
