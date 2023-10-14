@@ -104,7 +104,7 @@ $ ./console.py
 
 Documented commands (type help <topic>):
 ========================================
-EOF  all  count  create  destroy  help  quit  show  update
+EOF  all  create  destroy  help  quit  show
 
 (hbnb)
 ```
