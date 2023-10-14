@@ -21,7 +21,7 @@ class HBNBCommand(cmd.Cmd):
            "Review": Review, "State": State}
 
     def do_create(self, line):
-        'Creates a new instance of BaseModel'
+        """Creates a new instance of BaseModel"""
         if len(line) == 0:
             print('** class name missing **')
             return
@@ -34,7 +34,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_show(self, line):
-        "Prints the string representation of an instance"
+        """Prints the string representation of an instance"""
         if len(line) == 0:
             print('** class name missing **')
             return
@@ -57,7 +57,7 @@ class HBNBCommand(cmd.Cmd):
                 return
 
     def do_destroy(self, line):
-        "Deletes an instance based on the class name and id"
+        """Deletes an instance based on the class name and id"""
         if len(line) == 0:
             print('** class name missing **')
             return
@@ -80,7 +80,7 @@ class HBNBCommand(cmd.Cmd):
                 return
 
     def do_all(self, line):
-        'Prints all instances based or not on the class name'
+        """Prints all instances based or not on the class name"""
         arr = []
         if len(line) == 0:
             for key in storage.all():
@@ -99,12 +99,12 @@ class HBNBCommand(cmd.Cmd):
                 print(arr)
 
     def do_EOF(self, line):
-        'Quit command to exit the program'
+        """Quit command to exit the program"""
         print()
         return True
 
     def do_quit(self, line):
-        'Quit command to exit the program'
+        """Quit command to exit the program"""
         return True
 
     def emptyline(self):
