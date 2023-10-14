@@ -111,6 +111,9 @@ class HBNBCommand(cmd.Cmd):
         """just a new line"""
         pass
 
+    def parseLine(line):
+        """dwa dwa dwad w"""
+        return list(line.split())
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
