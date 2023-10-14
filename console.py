@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defines the HBnB console.
+Defines the HBnB console.d
 """
 
 import re
