@@ -107,7 +107,7 @@ class HBNBCommand(cmd.Cmd):
         """Quit command to exit the program"""
         return True
 
-    def emptyLine(self):
+    def emptyline(self):
         """just a new line"""
         pass
 
