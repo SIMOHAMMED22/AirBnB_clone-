@@ -132,9 +132,13 @@ class HBNBCommand(cmd.Cmd):
             return
 
         obj = storage.all()[key]
-        tp = type(getattr(obj, args[2]))
-        if str(tp) in self.data_types.keys():
-            spls[1] = self.data_types[str(tp)](spls[1])
+        try:
+            tp = type(getattr(obj, args[2]))
+        except AttributeError:
+            pass
+        else:
+            if str(tp) in self.data_types.keys():
+                spls[1] = self.data_types[str(tp)](spls[1])
 
         setattr(obj, args[2], spls[1])
         obj.save()
