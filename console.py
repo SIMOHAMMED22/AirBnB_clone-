@@ -20,6 +20,9 @@ class HBNBCommand(cmd.Cmd):
            "Amenity": Amenity, "City": City,
            "Review": Review, "State": State}
 
+    data_types = {"<class 'int'>": int, "<class 'float'>": float,
+                  "<class 'str'>": str}
+
     def do_create(self, line):
         """Creates a new instance of BaseModel"""
         if len(line) == 0:
@@ -98,6 +101,44 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print(arr)
 
+    def do_update(self, line):
+        """Updates an instance based on the class name and id"""
+        spls = line.split('"')
+
+        args = spls[0].split()
+        if len(args) == 0:
+            print("** class name missing **")
+            return
+
+        if args[0] not in self.cls:
+            print("** class doesn't exist **")
+            return
+
+        if len(args) == 1:
+            print("** instance id missing **")
+            return
+
+        key = args[0] + '.' + args[1]
+        if key not in storage.all().keys():
+            print("** no instance found **")
+            return
+
+        if len(args) == 2:
+            print("** attribute name missing **")
+            return
+
+        if len(spls) < 3:
+            print("** value missing **")
+            return
+
+        obj = storage.all()[key]
+        tp = type(getattr(obj, args[2]))
+        if str(tp) in self.data_types.keys():
+            spls[1] = self.data_types[str(tp)](spls[1])
+
+        setattr(obj, args[2], spls[1])
+        obj.save()
+
     def do_EOF(self, line):
         """Quit command to exit the program"""
         print()
@@ -114,4 +155,3 @@ class HBNBCommand(cmd.Cmd):
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
-    
