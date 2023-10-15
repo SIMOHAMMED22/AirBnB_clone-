@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Unit Test"""
 from models.engine.file_storage import FileStorage
+from models.base_model import BaseModel
 import unittest
 
 class TestFileStorage(unittest.TestCase):
@@ -20,6 +21,14 @@ class TestFileStorage(unittest.TestCase):
         """ ### """
         f = FileStorage()
         self.assertEqual(f.all(), {})
+
+    def test_new_func(self):
+        """ ### """
+        b = BaseModel()
+        f = FileStorage()
+        f.new(b)
+        key = "BaseModel." + b.id
+        self.assertEqual(f.all()[key], b)
 
 if __name__ == '__main__':
     unittest.main()
