@@ -16,5 +16,10 @@ class TestFileStorage(unittest.TestCase):
         f = FileStorage()
         self.assertEqual(f.__objects, {})
 
+    def test_all_func(self):
+        """ ### """
+        f = FileStorage()
+        self.assertEqual(f.all(), {})
+
 if __name__ == '__main__':
     unittest.main()
