@@ -43,6 +43,7 @@ class TestBaseModel(unittest.TestCase):
         b = BaseModel()
         upd_at = b.updated_at
         b.save()
+        self.assertEqual(b.updated_at.hour, datetime.now().hour)
         self.assertNotEqual(b.updated_at, upd_at)
         self.assertEqual(type(b.updated_at), type(datetime.now()))
 
