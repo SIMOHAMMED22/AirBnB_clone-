@@ -30,5 +30,12 @@ class TestFileStorage(unittest.TestCase):
         key = "BaseModel." + b.id
         self.assertEqual(f.all()[key], b)
 
+    def test_reload(self):
+        f = FileStorage()
+        fd = f.all().copy()
+        f.reload()
+        self.assertNotEqual(f.all(), fd)
+
+
 if __name__ == '__main__':
     unittest.main()
