@@ -31,6 +31,11 @@ class TestUser(unittest.TestCase):
         """ ### """
         u = User()
         self.assertEqual(type(u.first_name), str)
+        
+    def test_last_name(self):
+        """ ### """
+        u = User()
+        self.assertEqual(type(u.last_name), str)
 
     def test_password(self):
         """ ### """
