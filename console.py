@@ -73,7 +73,7 @@ class HBNBCommand(cmd.Cmd):
             if twc[0] in self.cls:
                 key = twc[0] + '.' + twc[1]
                 if key in storage.all():
-                    del(storage.all()[key])
+                    del (storage.all()[key])
                     storage.save()
                 else:
                     print("** no instance found **")
