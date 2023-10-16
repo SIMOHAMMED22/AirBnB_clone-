@@ -24,6 +24,27 @@ class TestBaseModel(unittest.TestCase):
         b = BaseModel()
         self.assertEqual(type(b.id), str)
 
+    def test_to_dict(self):
+        """###"""
+        b = BaseModel()
+        dic = b.to_dict()
+        self.assertEqual(dic['__class__'], b.__class__.__name__)
+        self.assertNotEqual(type(dic['created_at']), datetime)
+        self.assertNotEqual(type(dic['updated_at']), datetime)
+
+    def test__str__(self):
+        """###"""
+        b = BaseModel()
+        stg = f"[{b.__class__.__name__}] ({b.id}) {b.__dict__}"
+        self.assertEqual(str(b), stg)
+
+    def test_save(self):
+        """###"""
+        b = BaseModel()
+        upd_at = b.updated_at
+        b.save()
+        self.assertNotEqual(b.updated_at, upd_at)
+
 
 if __name__ == '__main__':
     unittest.main()

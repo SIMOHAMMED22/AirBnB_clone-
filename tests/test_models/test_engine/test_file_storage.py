@@ -20,7 +20,6 @@ class TestFileStorage(unittest.TestCase):
     def test_all_func(self):
         """ ### """
         f = FileStorage()
-
         self.assertEqual(f.all(), f._FileStorage__objects)
 
     def test_new_func(self):
