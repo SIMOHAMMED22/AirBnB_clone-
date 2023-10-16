@@ -44,7 +44,7 @@ class TestBaseModel(unittest.TestCase):
         upd_at = b.updated_at
         b.save()
         self.assertNotEqual(b.updated_at, upd_at)
-        self.assertEqual(type(b.updated_at), datetime)
+        self.assertEqual(type(b.updated_at), type(datetime.now()))
 
 
 if __name__ == '__main__':
