@@ -9,18 +9,28 @@ class TestCity(unittest.TestCase):
 
     def test_type_updated_at(self):
         """ ### """
-        b = City()
-        self.assertEqual(type(b.updated_at), datetime)
+        c = City()
+        self.assertEqual(type(c.updated_at), datetime)
         
     def test_type_created_at(self):
         """ ### """
-        b = City()
-        self.assertEqual(type(b.created_at), datetime)
+        c = City()
+        self.assertEqual(type(c.created_at), datetime)
 
     def test_type_id(self):
         """ ### """
-        b = City()
-        self.assertEqual(type(b.id), str)
+        c = City()
+        self.assertEqual(type(c.id), str)
+
+    def test_name(self):
+        """ ### """
+        c = City()
+        self.assertEqual(type(c.name), str)
+
+    def test_state_id(self):
+        """ ### """
+        c = City()
+        self.assertEqual(type(c.state_id), str)
 
 if __name__ == '__main__':
     unittest.main()

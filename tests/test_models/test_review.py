@@ -9,18 +9,33 @@ class TestReview(unittest.TestCase):
 
     def test_type_updated_at(self):
         """ ### """
-        b = Review()
-        self.assertEqual(type(b.updated_at), datetime)
+        r = Review()
+        self.assertEqual(type(r.updated_at), datetime)
         
     def test_type_created_at(self):
         """ ### """
-        b = Review()
-        self.assertEqual(type(b.created_at), datetime)
+        r = Review()
+        self.assertEqual(type(r.created_at), datetime)
 
     def test_type_id(self):
         """ ### """
-        b = Review()
-        self.assertEqual(type(b.id), str)
+        r = Review()
+        self.assertEqual(type(r.id), str)
+
+    def test_place_id(self):
+        """ ### """
+        r = Review()
+        self.assertEqual(type(r.place_id), str)
+
+    def test_user_id(self):
+        """ ### """
+        r = Review()
+        self.assertEqual(type(r.user_id), str)
+
+    def test_text(self):
+        """ ### """
+        r = Review()
+        self.assertEqual(type(r.text), str)
 
 if __name__ == '__main__':
     unittest.main()
