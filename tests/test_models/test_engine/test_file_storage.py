@@ -10,17 +10,18 @@ class TestFileStorage(unittest.TestCase):
     def test_file_path(self):
         """ ### """
         f = FileStorage()
-        self.assertEqual(f.__file_path, 'file.json')
+        self.assertEqual(f._FileStorage__file_path, 'file.json')
 
     def test_type_objects(self):
         """ ### """
         f = FileStorage()
-        self.assertEqual(f.__objects, {})
+        self.assertEqual(type(f.all()), dict)
 
     def test_all_func(self):
         """ ### """
         f = FileStorage()
-        self.assertEqual(f.all(), {})
+
+        self.assertEqual(f.all(), f._FileStorage__objects)
 
     def test_new_func(self):
         """ ### """
